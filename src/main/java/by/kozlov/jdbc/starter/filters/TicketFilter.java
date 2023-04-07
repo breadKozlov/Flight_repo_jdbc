@@ -14,7 +14,6 @@ public class TicketFilter {
 
     private static final TicketFilter INSTANCE = new TicketFilter();
 
-
     private static final String FIND_ALL_TICKETS = """
             select t.passenger_name,t.seat_no,t.cost,t.flight_id,t.passport_no
             from public.ticket as t
@@ -53,7 +52,7 @@ public class TicketFilter {
             """;
     private static final String UPDATE_STATUS_FLIGHT = """
             update public.flight
-            set status = ??
+            set status = ?
             where id = ?;
             """;
 
